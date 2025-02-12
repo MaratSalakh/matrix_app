@@ -1,0 +1,58 @@
+.callsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100vh;
+  margin: 20px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: green;
+  box-shadow: 0 0 5px green, 0 0 5px inset green;
+}
+
+.callsHeader {
+  display: flex;
+  align-items: center;
+}
+
+.callsTitle {
+  font-size: 40px;
+}
+
+.createCallButton {
+  margin-inline: 15px;
+}
+
+.callsZone {
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.callItem {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 35px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: green;
+  box-shadow: 0 0 5px green, 0 0 5px inset green;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.callItem:hover {
+  color: black;
+  background-color: green;
+  box-shadow: 0 0 5px green;
+}
