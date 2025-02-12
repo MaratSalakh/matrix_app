@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: green;
+  box-shadow: 0 0 5px green, 0 0 5px inset green;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0;
+}
