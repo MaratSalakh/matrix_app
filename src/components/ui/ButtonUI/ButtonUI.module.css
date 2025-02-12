@@ -1,0 +1,13 @@
+.buttonUI {
+  background-color: black;
+  border: none;
+  font-size: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.buttonUI:hover {
+  color: black;
+  background-color: green;
+  box-shadow: 0 0 5px green;
+}
