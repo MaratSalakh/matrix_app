@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin: 15px;
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: green;
+  box-shadow: 0 0 5px green, 0 0 5px inset green;
+}
+
+.menuItem {
+  color: green;
+  background-color: black;
+  border: none;
+  margin-bottom: 5px;
+  font-size: 36px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  color: black;
+  background-color: green;
+  box-shadow: 0 0 5px green;
+}
