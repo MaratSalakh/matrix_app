@@ -6,10 +6,9 @@ import Image from "next/image";
 import { TextUI } from "@/components/ui/TextUI/TextUI";
 import { usePostTextMutation } from "@/network/apiAI";
 import { peoples } from "@/data/data";
-import { useState } from "react";
 
 export default function ProfilePage() {
-  const [count, setCount] = useState(0);
+  const currentPerson = peoples[0];
 
   const [sendQuery, { data: queryData, isUninitialized }] =
     usePostTextMutation();
@@ -18,17 +17,8 @@ export default function ProfilePage() {
     sendQuery(text).then((res) => console.log(res));
   };
 
-  const currentPerson = peoples[count];
-
   const generate = () => {
-    // query(
-    //   "write decription of young beautiful girl, return only object: {name: string; age: number; gender: string; height: string; profession: string; hobbies: string; }"
-    // )
-    if (count > 0) {
-      setCount(0);
-    } else {
-      setCount(1);
-    }
+    query("write decription of young beautiful girl");
   };
 
   return (

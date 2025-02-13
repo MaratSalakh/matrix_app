@@ -16,6 +16,12 @@ export default function Home() {
           Profile
         </button>
         <button
+          onClick={() => router.push("/database")}
+          className={styles.menuItem}
+        >
+          Database
+        </button>
+        <button
           onClick={() => router.push("/calls")}
           className={styles.menuItem}
         >

@@ -10,7 +10,7 @@ export default function HeaderUI() {
   return (
     <div className={styles.header}>
       <h1 className={styles.title}>Matrix</h1>
-      <ButtonUI onClick={() => router.push("/")}>Back</ButtonUI>
+      <ButtonUI onClick={() => router.back()}>Back</ButtonUI>
     </div>
   );
 }
