@@ -27,7 +27,6 @@ export default function Home() {
         >
           Calls
         </button>
-        <button className={styles.menuItem}>Settings</button>
       </div>
     </div>
   );
