@@ -4,7 +4,7 @@
   align-items: start;
   justify-content: start;
   row-gap: 5px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 20px;
   padding: 20px;
   border-style: solid;
@@ -13,7 +13,7 @@
   box-shadow: 0 0 5px green, 0 0 5px inset green;
 }
 
-.button {
+.listItem {
   display: flex;
   align-items: center;
   justify-content: start;
