@@ -5,11 +5,24 @@ export const ButtonUI = (props: {
   children: ReactNode;
   className?: string;
   onClick?: () => void;
+  fontSize?: number;
 }) => {
-  const { children, onClick, className } = props;
+  const { children, onClick, className, fontSize = 30 } = props;
+
+  const onClickHandler = () => {
+    const audio = new Audio("/click_sound.mp3");
+    audio.play();
+    if (onClick) {
+      onClick();
+    }
+  };
 
   return (
-    <button className={`${className} ${styles.buttonUI}`} onClick={onClick}>
+    <button
+      style={{ fontSize: `${fontSize}px` }}
+      className={`${className} ${styles.buttonUI}`}
+      onClick={onClickHandler}
+    >
       {children}
     </button>
   );
