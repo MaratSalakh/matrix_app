@@ -3,7 +3,8 @@ import styles from "./page.module.css";
 import { TextUI } from "@/components/ui/TextUI/TextUI";
 import { Daum } from "@/models/responseUsers";
 
-const url = "https://api.freeapi.app/api/v1/public/randomusers?page=1&limit=10";
+const limit = 100;
+const url = `https://api.freeapi.app/api/v1/public/randomusers?page=1&limit=${limit}`;
 const options = { method: "GET", headers: { accept: "application/json" } };
 
 async function getUser(id: string): Promise<Daum | undefined> {
