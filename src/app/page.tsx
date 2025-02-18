@@ -1,5 +1,6 @@
 "use client";
 
+import { ButtonUI } from "@/components/ui/ButtonUI/ButtonUI";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 
@@ -9,24 +10,15 @@ export default function Home() {
   return (
     <div className={styles.main}>
       <div className={styles.menu}>
-        <button
-          onClick={() => router.push("/profile")}
-          className={styles.menuItem}
-        >
+        <ButtonUI fontSize={36} onClick={() => router.push("/profile")}>
           Profile
-        </button>
-        <button
-          onClick={() => router.push("/database")}
-          className={styles.menuItem}
-        >
+        </ButtonUI>
+        <ButtonUI fontSize={36} onClick={() => router.push("/database")}>
           Database
-        </button>
-        <button
-          onClick={() => router.push("/calls")}
-          className={styles.menuItem}
-        >
+        </ButtonUI>
+        <ButtonUI fontSize={36} onClick={() => router.push("/calls")}>
           Calls
-        </button>
+        </ButtonUI>
       </div>
     </div>
   );
