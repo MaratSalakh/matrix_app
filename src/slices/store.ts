@@ -1,11 +1,17 @@
 import { apiAI } from "@/network/apiAI";
+import { apiDATA } from "@/network/apiDATA";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const makeStore = () => {
   return configureStore({
-    reducer: { [apiAI.reducerPath]: apiAI.reducer },
+    reducer: {
+      [apiAI.reducerPath]: apiAI.reducer,
+      [apiDATA.reducerPath]: apiDATA.reducer,
+    },
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(apiAI.middleware),
+      getDefaultMiddleware()
+        .concat(apiAI.middleware)
+        .concat(apiDATA.middleware),
   });
 };
 

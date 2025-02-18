@@ -1,12 +1,12 @@
 import { ResponseAI } from "@/models/responseAI";
 import { API_KEY } from "@/utils/API_KEY";
-import { baseURL } from "@/utils/baseURL";
+import { baseURL_AI } from "@/utils/baseURLs";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiAI = createApi({
   reducerPath: "apiAI",
   baseQuery: fetchBaseQuery({
-    baseUrl: baseURL,
+    baseUrl: baseURL_AI,
     headers: {
       Authorization: `Bearer ${API_KEY}`,
       "Content-Type": "application/json",
