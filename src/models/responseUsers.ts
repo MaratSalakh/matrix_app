@@ -1,4 +1,4 @@
-export interface Root {
+export interface ResponseUsers {
   statusCode: number;
   data: Data;
   message: string;
