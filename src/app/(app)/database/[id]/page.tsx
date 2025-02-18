@@ -11,7 +11,7 @@ async function getUser(id: string): Promise<Daum | undefined> {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
-    return data.data.data[id];
+    return data.data.data[+id - 1];
   } catch (error) {
     console.error(error);
   }
