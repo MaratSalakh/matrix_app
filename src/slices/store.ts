@@ -1,10 +1,12 @@
 import { apiAI } from "@/network/apiAI";
 import { apiDATA } from "@/network/apiDATA";
+import databaseReducer from "@/slices/databaseSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
+      database: databaseReducer,
       [apiAI.reducerPath]: apiAI.reducer,
       [apiDATA.reducerPath]: apiDATA.reducer,
     },
