@@ -2,6 +2,7 @@
 
 import styles from "./page.module.css";
 import { ButtonUI } from "@/components/ui/ButtonUI/ButtonUI";
+import { LoaderUI } from "@/components/ui/Loader/Loader";
 import { useGetUsersQuery } from "@/network/apiDATA";
 import { incrementLimit } from "@/slices/databaseSlice";
 import { useAppDispatch, useAppSelector } from "@/slices/hooks";
@@ -24,15 +25,19 @@ export default function DatabasePage() {
   return (
     <div>
       <div className={styles.mainBlock}>
-        {users?.data.data.map((item, i) => (
-          <ButtonUI
-            onClick={() => router.push(`/database/${item.id}`)}
-            className={styles.listItem}
-            key={i}
-          >
-            {`${item.name.first} ${item.name.last}`}
-          </ButtonUI>
-        ))}
+        {users ? (
+          users?.data.data.map((item, i) => (
+            <ButtonUI
+              onClick={() => router.push(`/database/${item.id}`)}
+              className={styles.listItem}
+              key={i}
+            >
+              {`${item.name.first} ${item.name.last}`}
+            </ButtonUI>
+          ))
+        ) : (
+          <LoaderUI></LoaderUI>
+        )}
         {limit < 100 ? (
           <ButtonUI onClick={fetchMorePersons} className={styles.listItem}>
             More persons

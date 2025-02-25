@@ -6,19 +6,18 @@ import Image from "next/image";
 import { TextUI } from "@/components/ui/TextUI/TextUI";
 import { usePostTextMutation } from "@/network/apiAI";
 import { peoples } from "@/data/data";
+import { LoaderUI } from "@/components/ui/Loader/Loader";
 
 export default function ProfilePage() {
   const currentPerson = peoples[0];
 
-  const [sendQuery, { data: queryData, isUninitialized }] =
+  const [sendQuery, { data: queryData, isUninitialized, isLoading }] =
     usePostTextMutation();
 
-  const query = (text: string) => {
-    sendQuery(text).then((res) => console.log(res));
-  };
-
-  const generate = () => {
-    query("write decription of young beautiful girl");
+  const query = () => {
+    sendQuery("write decription of young beautiful girl").then((res) =>
+      console.log(res)
+    );
   };
 
   return (
@@ -43,11 +42,17 @@ export default function ProfilePage() {
             </ul>
           }
         </div>
-        <TextUI>
-          {isUninitialized ? "no data" : queryData?.choices[0].message.content}
-        </TextUI>
-        <ButtonUI onClick={() => generate()} className={styles.generateButton}>
-          Generate
+        {isLoading ? (
+          <LoaderUI></LoaderUI>
+        ) : (
+          <TextUI>
+            {isUninitialized
+              ? "no data"
+              : queryData?.choices[0].message.content}
+          </TextUI>
+        )}
+        <ButtonUI onClick={query} className={styles.generateButton}>
+          Generate description
         </ButtonUI>
       </div>
     </div>
