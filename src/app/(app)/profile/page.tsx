@@ -28,7 +28,7 @@ export default function ProfilePage() {
             alt="portrait"
             height={250}
             width={250}
-            src="/pixel_portrait_3.webp"
+            src="/woman_pictures/pixel_portrait_3.webp"
             className={styles.profilePhoto}
           ></Image>
           {
