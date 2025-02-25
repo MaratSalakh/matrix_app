@@ -20,8 +20,8 @@ export default function Home() {
         <ButtonUI fontSize={36} onClick={() => router.push(Routes.calls)}>
           Calls
         </ButtonUI>
-        <ButtonUI fontSize={36} onClick={() => router.push(Routes.tokens)}>
-          Tokens
+        <ButtonUI fontSize={36} onClick={() => router.push(Routes.info)}>
+          Info
         </ButtonUI>
       </div>
     </div>
