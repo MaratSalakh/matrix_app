@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { TextUI } from "@/components/ui/TextUI/TextUI";
 import { Daum } from "@/models/responseUsers";
+import { descriptions_men, descriptions_women } from "@/data/data";
 
 const limit = 100;
 const url = `https://api.freeapi.app/api/v1/public/randomusers?page=1&limit=${limit}`;
@@ -32,10 +33,10 @@ export default async function PersonPage({
 
   const imageMatcher = () => {
     if (user?.gender === "male") {
-      return `/man_pictures/pixel_portrait_${getRandomInt(1)}.webp`;
+      return `/man_pictures/pixel_portrait_${getRandomInt(2)}.webp`;
     }
 
-    return `/woman_pictures/pixel_portrait_${getRandomInt(4)}.webp`;
+    return `/woman_pictures/pixel_portrait_${getRandomInt(5)}.webp`;
   };
 
   return (
@@ -62,7 +63,11 @@ export default async function PersonPage({
               <li>Phone: {user.phone}</li>
             </ul>
           </div>
-          <TextUI>{user ? user.email : null}</TextUI>
+          <TextUI>
+            {user?.gender === "male"
+              ? descriptions_men[getRandomInt(4)].text
+              : descriptions_women[getRandomInt(4)].text}
+          </TextUI>
         </div>
       ) : null}
     </>
