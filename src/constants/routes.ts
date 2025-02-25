@@ -3,5 +3,5 @@ export enum Routes {
   profile = "/profile",
   database = "/database",
   calls = "/calls",
-  tokens = "/tokens",
+  info = "/info",
 }
