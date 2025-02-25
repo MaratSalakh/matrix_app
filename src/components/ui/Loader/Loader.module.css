@@ -1,0 +1,33 @@
+.loader {
+  width: 100%;
+  padding: 5px;
+}
+
+.loaderItem {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  animation: opacity-change 1s alternate ease-out infinite,
+    right-to-left 3s alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes right-to-left {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 95%;
+  }
+}
+
+@keyframes opacity-change {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
