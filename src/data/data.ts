@@ -17,7 +17,7 @@ export const peoples = [
   },
 ];
 
-export const descriptions = [
+export const descriptions_women = [
   {
     text: "Her laughter was like the chime of the bell over the cafe door, light and welcoming. Sunlight seemed to follow her around the small space, catching in the honey-gold highlights of her long, wavy hair. She moved with a dancer's grace, effortlessly navigating the tables and chairs, a tray balanced confidently in her hands.  Her eyes, the color of warmed chocolate, held a spark of intelligence and genuine warmth that put customers at ease.  A dusting of freckles scattered across her nose and cheeks added to her youthful charm, and she often had a small, almost imperceptible smudge of coffee grounds on one cheekbone, a badge of honor from her morning rush. Her smile was genuine, lighting up her entire face, and when she spoke, her voice was soft and musical, leaving a lingering feeling of calm and contentment.  She wore a simple, slightly oversized cafe apron over a comfortable, but stylish, outfit, often with a subtle, fashionable detail -  a delicate silver necklace or a brightly colored scarf tied loosely around her neck.  She exuded an air of quiet confidence and attentiveness, making every customer feel like the most important person in the room. \n",
   },
@@ -29,5 +29,20 @@ export const descriptions = [
   },
   {
     text: "She moved with a grace that hinted at both effortless elegance and a playful spirit. Her laughter, when it came, was like wind chimes in a summer breeze, bright and infectious. Her eyes, the color of warm honey, held a depth that suggested an old soul trapped within a youthful frame; they could sparkle with mischief one moment and soften with an empathetic understanding the next. Her hair, a cascade of [choose one: auburn, raven, sun-kissed blonde, etc.] curls/waves that framed her delicate face, seemed to capture the light, turning each strand into a shimmering halo. Her skin, smooth and lightly kissed with [choose one: freckles, a delicate flush, a natural glow], held a radiant beauty that was both captivating and seemingly effortless. She possessed a quiet confidence that resonated with an inner strength, a certainty that she knew who she was and where she was going. There was a genuineness about her, a quality that drew people in, making them feel comfortable and seen. She was a young woman poised on the cusp of her future, a blossoming beauty brimming with potential, and the world seemed to hold its breath, waiting to see what she would become.",
+  },
+];
+
+export const descriptions_men = [
+  {
+    text: "A businessman in his late 40s, dressed in a sharp suit and polished shoes, carries himself with an air of authority and confidence. He’s often seen rushing between meetings, phone in hand, discussing deals or strategizing with colleagues. His sharp mind and charisma make him a natural negotiator, always looking for opportunities to grow his ventures. Despite his busy schedule, he remains composed and focused, balancing multiple projects with ease. He values innovation and isn’t afraid to take calculated risks. Outside of work, he enjoys networking at high-profile events or spending quiet moments reflecting on his next big move. Ambitious and driven, he’s the kind of person who turns visions into reality.",
+  },
+  {
+    text: "A manager in his mid-40s, dressed in a crisp button-down shirt and tailored trousers, exudes confidence and professionalism. He’s often seen with a tablet or laptop in hand, juggling meetings, emails, and team updates. His demeanor is calm and approachable, but he’s decisive when it comes to making tough calls. He’s a natural leader, skilled at motivating his team and resolving conflicts, while keeping an eye on deadlines and goals. Despite the pressure, he maintains a balanced perspective, often cracking a joke to lighten the mood. Outside work, he enjoys spending time with his family or unwinding with a good book. He’s the kind of person who thrives under pressure and takes pride in seeing his team succeed.",
+  },
+  {
+    text: "A programmer in his early 30s, dressed casually in a hoodie and jeans, sits at his desk surrounded by multiple monitors. His workspace is cluttered with coffee cups, a mechanical keyboard, and sticky notes filled with code snippets. His eyes are focused on lines of code, his fingers typing rapidly as he solves complex problems or debugs software. He’s analytical, detail-oriented, and thrives on logic and creativity. Despite long hours and occasional frustration, he enjoys the challenge of building something from scratch. In his free time, he might tinker with side projects or play video games, always staying curious about new technologies. Quiet but passionate, he’s the kind of person who finds joy in turning ideas into functional solutions.",
+  },
+  {
+    text: "A factory worker is a man in his late 30s, dressed in worn-out overalls and steel-toed boots, his face marked with streaks of grease and sweat. His hands are rough and calloused from years of handling machinery and heavy materials. He spends his days on a noisy production floor, operating equipment or assembling parts with precision and focus. Despite the monotony and physical demands of his job, he works diligently, often with a quiet, determined demeanor. He’s reliable, hardworking, and takes pride in contributing to the factory’s output, even if his efforts often go unnoticed. At the end of his shift, he leaves tired but satisfied, knowing he’s done his part to keep things running.",
   },
 ];
