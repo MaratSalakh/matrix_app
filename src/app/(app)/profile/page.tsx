@@ -8,11 +8,12 @@ import { usePostTextMutation } from "@/network/apiAI";
 import { LoaderUI } from "@/components/ui/Loader/Loader";
 import { useGetPersonsQuery } from "@/network/apiMATRIX";
 import { translit } from "@/utils/translitter";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ContentBlockUI } from "@/components/ui/ContentBlockUI/ContentBlockUI";
+import { PersonData } from "@/models/responsePersons";
+import { getRandomInt } from "@/utils/getRandomInt";
 
 export default function ProfilePage() {
-  const [imageNumber, setImageNumber] = useState(0);
   const [personIndex, setPersonIndex] = useState(0);
   const { data } = useGetPersonsQuery();
   const currentPerson = data ? data[personIndex] : null;
@@ -40,11 +41,13 @@ export default function ProfilePage() {
       : null;
   };
 
-  useEffect(() => {
-    return imageNumber > 3
-      ? setImageNumber(0)
-      : setImageNumber(imageNumber + 1);
-  }, [personIndex]);
+  const imageMatcher = (person: PersonData | null) => {
+    if (person?.gender === "male") {
+      return `/man_pictures/pixel_portrait_${getRandomInt(2)}.webp`;
+    }
+
+    return `/woman_pictures/pixel_portrait_${getRandomInt(5)}.webp`;
+  };
 
   return (
     <ContentBlockUI className={styles.contentBlock}>
@@ -54,7 +57,7 @@ export default function ProfilePage() {
             alt="portrait"
             height={250}
             width={250}
-            src={`/woman_pictures/pixel_portrait_${imageNumber}.webp`}
+            src={imageMatcher(currentPerson)}
             className={styles.personPhoto}
           ></Image>
           {
