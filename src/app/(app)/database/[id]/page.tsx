@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { TextUI } from "@/components/ui/TextUI/TextUI";
 import { Daum } from "@/models/responseUsers";
 import { descriptions_men, descriptions_women } from "@/data/data";
+import { getRandomInt } from "@/utils/getRandomInt";
 
 const limit = 100;
 const url = `https://api.freeapi.app/api/v1/public/randomusers?page=1&limit=${limit}`;
@@ -16,10 +17,6 @@ async function getUser(id: string): Promise<Daum | undefined> {
   } catch (error) {
     console.error(error);
   }
-}
-
-function getRandomInt(max: number) {
-  return Math.floor(Math.random() * max);
 }
 
 export default async function PersonPage({
