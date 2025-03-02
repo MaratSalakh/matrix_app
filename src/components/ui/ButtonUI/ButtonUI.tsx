@@ -12,6 +12,7 @@ export const ButtonUI = (props: {
   const onClickHandler = () => {
     const audio = new Audio("/click_sound.mp3");
     audio.play();
+    audio.volume = 0.1;
     if (onClick) {
       onClick();
     }
