@@ -1,4 +1,6 @@
-export type ResponsePersons = {
+export type ResponsePersons = PersonData[];
+
+export type PersonData = {
   id: number;
   name: string;
   surname: string;
@@ -6,4 +8,4 @@ export type ResponsePersons = {
   city: string;
   country: string;
   gender: string;
-}[];
+};
