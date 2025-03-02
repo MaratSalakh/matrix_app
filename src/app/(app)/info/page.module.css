@@ -3,3 +3,36 @@
   align-items: start;
   justify-content: start;
 }
+
+.animationBlock {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.animate {
+  position: relative;
+  animation-name: up-down;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+@keyframes up-down {
+  0% {
+    top: 50px;
+  }
+
+  100% {
+    top: -50px;
+  }
+}

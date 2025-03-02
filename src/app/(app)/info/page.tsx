@@ -8,6 +8,11 @@ export default function InfoPage() {
       <div className={styles.content}>
         <TextUI>Current AI is Gemini</TextUI>
       </div>
+      <div className={styles.animationBlock}>
+        <div className={styles.animate}>
+          <div className={styles.cube}></div>
+        </div>
+      </div>
     </ContentBlockUI>
   );
 }
