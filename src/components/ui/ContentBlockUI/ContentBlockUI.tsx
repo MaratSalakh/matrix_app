@@ -1,8 +1,12 @@
 import { ReactNode } from "react";
 import styles from "./ContentBlockUI.module.css";
+import cn from "classnames";
 
-export const ContentBlockUI = (props: { children: ReactNode }) => {
-  const { children } = props;
+export const ContentBlockUI = (props: {
+  className?: string;
+  children: ReactNode;
+}) => {
+  const { children, className } = props;
 
-  return <div className={styles.contentBlock}>{children}</div>;
+  return <div className={cn(styles.contentBlock, className)}>{children}</div>;
 };
