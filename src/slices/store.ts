@@ -1,5 +1,6 @@
 import { apiAI } from "@/network/apiAI";
 import { apiDATA } from "@/network/apiDATA";
+import { apiMATRIX } from "@/network/apiMATRIX";
 import databaseReducer from "@/slices/databaseSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
@@ -9,11 +10,13 @@ export const makeStore = () => {
       database: databaseReducer,
       [apiAI.reducerPath]: apiAI.reducer,
       [apiDATA.reducerPath]: apiDATA.reducer,
+      [apiMATRIX.reducerPath]: apiMATRIX.reducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware()
         .concat(apiAI.middleware)
-        .concat(apiDATA.middleware),
+        .concat(apiDATA.middleware)
+        .concat(apiMATRIX.middleware),
   });
 };
 
