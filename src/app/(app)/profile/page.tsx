@@ -42,11 +42,23 @@ export default function ProfilePage() {
   };
 
   const imageMatcher = (person: PersonData | null) => {
+    if (person === null) {
+      return `/digital_rain.webp`;
+    }
+
     if (person?.gender === "male") {
       return `/man_pictures/pixel_portrait_${getRandomInt(2)}.webp`;
     }
 
     return `/woman_pictures/pixel_portrait_${getRandomInt(5)}.webp`;
+  };
+
+  const errorHandler = () => {
+    if (!queryData?.choices) {
+      return "error";
+    }
+
+    return queryData?.choices[0].message.content;
   };
 
   return (
@@ -84,9 +96,7 @@ export default function ProfilePage() {
       {isLoading ? (
         <LoaderUI></LoaderUI>
       ) : (
-        <TextUI>
-          {isUninitialized ? "no data" : queryData?.choices[0].message.content}
-        </TextUI>
+        <TextUI>{isUninitialized ? "no data" : errorHandler()}</TextUI>
       )}
       <ButtonUI onClick={query} className={styles.generateButton}>
         Generate description
